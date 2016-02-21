@@ -9,6 +9,10 @@ var client = redis.createClient(
   process.env.REDIS_1_PORT_6379_TCP_ADDR || '127.0.0.1'
 );
 
+app.get('/about', function(req, res, next) {
+  res.send('Simple page that counts visits');
+});
+
 app.get('/', function(req, res, next) {
   client.incr('visits', function(err, visits) {
     if(err) return next(err);
