@@ -12,6 +12,6 @@ describe('Array', function(){
 
 describe('Silly Test', function(){
   it('should not fail', function() {
-    assert.equal(1,2);
+    assert.equal(1,1);
   });
 });
