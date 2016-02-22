@@ -15,7 +15,7 @@ app.get('/about', function(req, res, next) {
 app.get('/', function(req, res, next) {
   client.incr('visits', function(err, visits) {
     if(err) return next(err);
-    res.send('You have viewed this page ' + visits + ' times!');
+    res.send('You have viewed this page ' + visits + ' times!\n');
   });
 });
 

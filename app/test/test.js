@@ -1,6 +1,6 @@
 var assert = require("assert");
-var request = require("supertest");
-var app = require("../index.js");
+//var request = require("supertest");
+//var app = require("../index.js");
 
 describe('Array', function(){
   describe('indexOf()', function(){
@@ -10,13 +10,8 @@ describe('Array', function(){
   });
 });
 
-describe('About Page', function(){
-  it('should be available', function() {
-    request(app)
-      .get('/about')
-      .expect(200)
-      .end(function(err, res) {
-        if (err) throw err;
-      });
+describe('Silly Test', function(){
+  it('should not fail', function() {
+    assert.equal(1,2);
   });
 });
